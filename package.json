@@ -1,0 +1,29 @@
+{
+  "name": "smartbuy---backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/app.js",
+    "start": "node ./src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.3.1",
+    "axios": "^1.6.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "iconv-lite": "^0.6.3",
+    "langchain": "^0.1.30",
+    "moment": "^2.29.4",
+    "mongoose": "^7.5.4",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.0.1",
+    "xlsx": "^0.18.5",
+    "xlsx-js-style": "^1.2.0",
+    "xlsx-style": "^0.8.13"
+  }
+}

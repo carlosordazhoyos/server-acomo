@@ -1,0 +1,68 @@
+const { Schema, model } = require('mongoose');
+
+const ViewClientReportSchema = new Schema({
+    name: String,
+    lname_p: String,
+    lname_m: String,
+    username: String,
+    company_name: String,
+    created_at: { type: Date, default: Date.now },
+    address: String,
+    cellphone: String,
+    n_partida: String,
+    doc_file: String,
+    doc_file_1: String,
+    foto_dni: String,
+    resident: { type: String, default: null },
+    job: String,
+    cargo: String,
+    nacimiento: Date,
+    email: String,
+    content_promo: { type: Boolean, default: true },
+    level: String,
+    is_active: { type: Boolean, default: true },
+    department: String,
+    province: String,
+    district: String,
+    special_service: {
+        sp_compra: Number,
+        sp_venta: Number,
+    },
+    document_type: String,
+    confirmed_access: { type: Boolean, default: false },
+    pep: {
+        institute: String,
+        cargo: String,
+        since: Date,
+    },
+    operations: [
+        {
+            destiny_bank: String,
+            origin_bank: String,
+            action: String,
+            amount: Number,
+            status: String,
+            created_at: { type: Date, default: Date.now },
+        },
+    ],
+    company: {
+        _id: { type: Schema.Types.ObjectId, ref: "company" },
+        economic_activity: String,
+        number: String,
+        size: String,
+        obligated_subject: String,
+        ruc_file: String,
+        validity: String,
+        created_at: { type: Date, default: Date.now },
+        constitucion: Date,
+        commercial_address: String,
+        department: String,
+        cellphone: String,
+        telephone: String,
+        email: String,
+        province: String,
+        district: String,
+    }
+})
+
+module.exports = model("view_client_report", ViewClientReportSchema, "view_clients_report");
